@@ -9,9 +9,14 @@ using Microsoft.Extensions.Hosting;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using System;
 
+
+using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity.UI;
+using Microsoft.AspNetCore.Identity.UI.Services;
+
 using App_consulta.Models;
 using App_consulta.Services;
-using Microsoft.AspNetCore.Identity.UI.Services;
+
 
 namespace App_consulta
 {
@@ -74,7 +79,16 @@ namespace App_consulta
                                 policy.RequireClaim("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/Rol.Editar", "1"));
                 options.AddPolicy("Usuario.Editar", policy =>
                                 policy.RequireClaim("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/Usuario.Editar", "1"));
-               
+
+
+                options.AddPolicy("Persona.Listado", policy =>
+                                policy.RequireClaim("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/Persona.Listado", "1"));
+
+                options.AddPolicy("Persona.Detalle", policy =>
+                                policy.RequireClaim("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/Persona.Detalle", "1"));
+                options.AddPolicy("Persona.Pagar", policy =>
+                               policy.RequireClaim("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/Persona.Pagar", "1"));
+
             });
 
 

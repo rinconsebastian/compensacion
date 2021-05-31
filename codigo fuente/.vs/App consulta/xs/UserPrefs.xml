@@ -1,0 +1,48 @@
+﻿<Properties StartupConfiguration="{555EC625-B29C-4B57-8444-02B6F65C3604}|Default">
+  <MonoDevelop.Ide.ItemProperties.App_220consulta PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../../../usr/local/share/dotnet/sdk/5.0.203/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.targets">
+    <Files>
+      <File FileName="App consulta/Controllers/PersonaController.cs" Line="37" Column="1" />
+      <File FileName="App consulta/Controllers/HomeController.cs" Line="12" Column="45" />
+      <File FileName="App consulta/Views/Persona/Listado.cshtml" Line="25" Column="73" />
+      <File FileName="App consulta/Views/Responsables/Index2.cshtml" Line="8" Column="1" />
+      <File FileName="App consulta/wwwroot/js/tables/PersonaListadoScript.js" Line="191" Column="38" />
+      <File FileName="App consulta/Models/PersonaViewModel.c" Line="6" Column="15" />
+      <File FileName="App consulta/Models/PersonaModel.cs" Line="68" Column="2" />
+      <File FileName="App consulta/Controllers/RolController.cs" Line="27" Column="10" />
+      <File FileName="../../../../../../usr/local/share/dotnet/sdk/5.0.203/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.targets" Line="295" Column="5" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="App consulta" expanded="True">
+            <Node name="App consulta" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="PersonaViewModel.cs" selected="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="Persona" expanded="True" />
+                <Node name="Responsables" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="js" expanded="True">
+                  <Node name="tables" expanded="True" />
+                </Node>
+                <Node name="lib" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

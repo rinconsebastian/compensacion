@@ -17,7 +17,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.4" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.4">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.6">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -29,8 +29,11 @@
     <Folder Include="Views\Rol\" />
     <Folder Include="Views\Users\" />
     <Folder Include="wwwroot\lib\font-awesome\" />
+    <Folder Include="Views\Persona\" />
+    <Folder Include="wwwroot\js\tables\" />
   </ItemGroup>
 
+  
   <ItemGroup>
     <None Include="Views\Logs\Details.cshtml" />
     <None Include="Views\Logs\Index.cshtml" />
@@ -43,6 +46,5 @@
     <None Include="Views\Shared\Components\UsersByRole\Default.cshtml" />
     <None Include="wwwroot\css\devexpress\icons\dxicons.woff2" />
     <None Include="wwwroot\css\devexpress\icons\dxiconsmaterial.woff2" />
-  </ItemGroup>
-
+    </ItemGroup>
 </Project>

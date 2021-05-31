@@ -15,7 +15,22 @@ namespace App_consulta.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 64)
-                .HasAnnotation("ProductVersion", "5.0.5");
+                .HasAnnotation("ProductVersion", "5.0.6");
+
+            modelBuilder.Entity("App_consulta.Models.ActividadModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Actividad");
+                });
 
             modelBuilder.Entity("App_consulta.Models.ApplicationRole", b =>
                 {
@@ -236,6 +251,116 @@ namespace App_consulta.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Log");
+                });
+
+            modelBuilder.Entity("App_consulta.Models.PagoModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Estado")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("IdPersona")
+                        .HasColumnType("int");
+
+                    b.Property<string>("IdUsuario")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Mes")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Nombreusuario")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Soporte1")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Soporte2")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Soporte3")
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("Valor")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IdPersona");
+
+                    b.ToTable("Pago");
+                });
+
+            modelBuilder.Entity("App_consulta.Models.PersonaModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Ambulante")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("Confianza")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Correo")
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("Edad")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Foto")
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("IdActividad")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdPlaya")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Sexo")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Telefono")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IdActividad");
+
+                    b.HasIndex("IdPlaya");
+
+                    b.ToTable("Persona");
+                });
+
+            modelBuilder.Entity("App_consulta.Models.PlayaModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Poligono")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Playa");
                 });
 
             modelBuilder.Entity("App_consulta.Models.Policy", b =>
@@ -598,6 +723,36 @@ namespace App_consulta.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("App_consulta.Models.PagoModel", b =>
+                {
+                    b.HasOne("App_consulta.Models.PersonaModel", "Persona")
+                        .WithMany()
+                        .HasForeignKey("IdPersona")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Persona");
+                });
+
+            modelBuilder.Entity("App_consulta.Models.PersonaModel", b =>
+                {
+                    b.HasOne("App_consulta.Models.ActividadModel", "Actividad")
+                        .WithMany()
+                        .HasForeignKey("IdActividad")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("App_consulta.Models.PlayaModel", "Playa")
+                        .WithMany()
+                        .HasForeignKey("IdPlaya")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Actividad");
+
+                    b.Navigation("Playa");
                 });
 
             modelBuilder.Entity("App_consulta.Models.Responsable", b =>

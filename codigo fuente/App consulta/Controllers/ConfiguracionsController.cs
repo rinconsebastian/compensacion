@@ -78,7 +78,7 @@ namespace App_consulta.Controllers
 
 
         [Authorize(Policy = "Configuracion.General")]
-        public async Task<IActionResult> Index()
+        public  IActionResult Index()
         {
             return View();
         }

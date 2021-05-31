@@ -13,6 +13,7 @@ namespace App_consulta.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
+            
         }
 
 
@@ -23,6 +24,21 @@ namespace App_consulta.Data
         public DbSet<Configuracion> Configuracion { get; set; }
 
         public DbSet<LogModel> Log { get; set; }
+
+
+        public DbSet<PlayaModel> Playa { get; set; }
+
+
+         public DbSet<PersonaModel> Persona { get; set; }
+
+
+        public DbSet<ActividadModel> Actividad { get; set; }
+
+
+        public DbSet<PagoModel> Pago { get; set; }
+
+
+        
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

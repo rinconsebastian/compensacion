@@ -1,6 +1,12 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+.btn-listado {
+    font-size: 0.8rem;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
 a.navbar-brand {
     white-space: normal;
     text-align: center;
@@ -1220,3 +1226,25 @@ input, select, textarea {
         .reporte-row .reporte-row-ejecucion .form-control.Reportar-form-input {
             font-size: 11px;
         }
+
+
+.bordeDetallePersona {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: #adadad;
+    padding: 15px;
+    margin-top: 22px;
+    margin-left: -4px;
+    margin-right: -4px;
+}
+
+.margin-top-50 {
+margin-top: 30px;
+
+}
+
+
+.align-center {
+text-align: center;
+}
