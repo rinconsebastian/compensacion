@@ -1,0 +1,21 @@
+﻿@model FormAdjuntoModel
+
+
+<form id="formAdjunto_string" data_id="@Model.Ruta" data_id2="@Model.Id" data_nombre="@Model.Nombre"  asp-action="Create" asp-controller="Adjunto" enctype="multipart/form-data" method="post"  class="form-inline formAdjunto">
+    @Html.Hidden("id", Model, new { id = "idejecucion"})
+    <label class="sr-only" for="nameAdjuntoEjec">Nombre del adjunto</label>
+    <div class="input-group mr-sm-2 mt-1">
+        <div class="custom-file hideForce">
+            <input id="fileAdjuntoEjec_@Model.Ruta" name="file" required type="file" class="custom-file-input fileUploadAdjuntoEjec " lang="es">
+            <label class="custom-file-label" for="fileAdjuntoEjec" data-browse="Elegir">Seleccionar Archivo</label>
+        </div>
+    </div>
+    <button id="btnAdjuntoEjec_@Model.Ruta" data_id="@Model.Ruta" type="button" class="btn btn-primary mt-1 btn-upload width100">Cargar @Model.Nombre</button>
+</form>
+<div class="row">
+    <div class="col-12">
+        <span id="uploadingAdjuntoEjec_@Model.Ruta" class="form-text small text-primary"></span>
+        <a id="infoAdjuntoEjec_@Model.Ruta" class="form-text small text-success" target="_blank"></a>
+    </div>
+</div>
+

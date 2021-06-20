@@ -29,8 +29,6 @@
     <Folder Include="Views\Rol\" />
     <Folder Include="Views\Users\" />
     <Folder Include="wwwroot\lib\font-awesome\" />
-    <Folder Include="Views\Persona\" />
-    <Folder Include="wwwroot\js\tables\" />
   </ItemGroup>
 
   

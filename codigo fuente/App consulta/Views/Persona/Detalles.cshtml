@@ -25,6 +25,7 @@
                         <h2 class="form-control-plaintext ">@Html.DisplayFor(model => model.Nombre)</h2>
 
                         <h4 class="form-control-plaintext ">@Html.DisplayFor(model => model.Id)</h4>
+                        <input  type="hidden" id="idpersona" value="@Model.Id"/>
                     </div>
                 </div>
 
@@ -103,20 +104,48 @@
 
         <div class="form-group row">
 
-            <div class="col-sm-12">
+            <div class="col-sm-8">
                 <h4 class="form-control-plaintext ">Pagos</h4>
+            </div>
+            <div class="col-sm-4">
+                @if (ViewBag.pagos == "true")
+                {
+
+
+                    <button class="btn btn-outline-warning width100" type="button" data-toggle="modal" data-target="#modalPago"> Realizar pago </button>
+                }
+                else @if (ViewBag.pagos == "false")
+          {
+            <button class="btn btn-outline-success width100" disabled type="button"> Pagos realizados </button>
+        }
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="gridContainer" class="row-lm aux-selection"></div>
             </div>
         </div>
 
     </div>
-    </div>
+</div>
 
 
-    <div class="form-group row">
-        <div class="col-sm-3 offset-3">
-            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-primary btn-block">Editar</a>
-        </div>
-        <div class="col-sm-3">
-            <a asp-action="Index" class="btn btn btn-outline-dark btn-block">Volver</a>
-        </div>
+<div class="form-group row margin-top-50">
+
+    <div class="col-sm-12 align-center">
+        <a asp-action="Listado" class="btn btn btn-outline-dark btn-block">Volver</a>
     </div>
+</div>
+
+
+<partial name="_PopUpPagoPartial" />
+
+
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/moment.js"></script>
+    <script type="text/javascript" src="~/js/tables/PagosListadoScript.js"></script>
+    <script type="text/javascript" src="~/js/uploadbox.js"></script>
+   
+}

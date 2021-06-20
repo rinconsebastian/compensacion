@@ -1,0 +1,78 @@
+﻿@model App_consulta.Models.PagoModel
+
+@{
+    ViewData["Title"] = "DetallesPago";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-sm-5 offset-sm-7 ">
+        <div class="row">
+            <div class="col-sm-12 bordepago">
+                RECIBO DE PAGO
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 bordepago">
+                @Html.DisplayFor(model => model.Id)
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-2 text-uppercase  bordepago">
+        Ciudad y Fecha
+    </div>
+    <div class="col-sm-10 text-uppercase bordepago">
+        Cartagena   @Html.DisplayFor(model => model.Fecha)
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-2 text-uppercase bordepago">
+        Pagado a:
+    </div>
+    <div class="col-sm-6 text-uppercase bordepago">
+         @Html.DisplayFor(model => model.Persona.Nombre)
+    </div>
+    <div class="col-sm-4 text-uppercase bordepago">
+        $   @Html.DisplayFor(model => model.Valor)
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-2 text-uppercase bordepago">
+        Por concepto:
+    </div>
+    <div class="col-sm-10 text-uppercase bordepago">
+        Pago Nº @Html.DisplayFor(model => model.Mes) por compensación como vendedor de @Html.DisplayFor(model => model.Persona.Actividad.Nombre) en la playa @Html.DisplayFor(model => model.Persona.Playa.Nombre)
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-2 text-uppercase bordepago">
+        Pagado por:
+    </div>
+    <div class="col-sm-4 text-uppercase bordepago">
+        @Html.DisplayFor(model => model.Nombreusuario)
+    </div>
+
+    <div class="col-sm-2 text-uppercase bordepago">
+        CC vendedor:
+    </div>
+    <div class="col-sm-4 text-uppercase bordepago">
+        @Html.DisplayFor(model => model.IdPersona)
+    </div>
+</div>
+
+
+
+
+<div class="row hidePrint margin-top-50">
+    <div class="col-sm-4 offset-sm-4 ">
+
+        <a class="btn btn btn-outline-dark btn-block" onclick="window.top.close();">Cerrar </a>
+    </div>
+
+    
+</div>

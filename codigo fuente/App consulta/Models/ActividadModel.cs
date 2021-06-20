@@ -21,7 +21,13 @@ namespace App_consulta.Models
 
 
 
-      
+        [Required]
+        [Display(Name = "Valor a compensar")]
+        public int Valor { get; set; }
+
+
+
+
 
 
         [NotMapped]

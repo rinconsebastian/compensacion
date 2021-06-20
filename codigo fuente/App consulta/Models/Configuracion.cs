@@ -54,7 +54,12 @@ namespace App_consulta.Models
         [Display(Name = "Libre")]
         public bool libre { get; set; }
 
-        
+
+        [Required]
+        [Display(Name = "Pagos a realizar")]
+        public int pagos { get; set; }
+
+
 
     }
 }

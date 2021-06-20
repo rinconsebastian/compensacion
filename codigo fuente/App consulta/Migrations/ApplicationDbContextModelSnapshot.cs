@@ -27,6 +27,9 @@ namespace App_consulta.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<int>("Valor")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.ToTable("Actividad");
@@ -204,6 +207,9 @@ namespace App_consulta.Migrations
                     b.Property<bool>("libre")
                         .HasColumnType("tinyint(1)");
 
+                    b.Property<int>("pagos")
+                        .HasColumnType("int");
+
                     b.HasKey("id");
 
                     b.ToTable("Configuracion");
@@ -220,7 +226,8 @@ namespace App_consulta.Migrations
                             colorTextoHeader = "#ffffff",
                             colorTextoPrincipal = "#00000",
                             contacto = "rinconsebastian@gmail.com",
-                            libre = true
+                            libre = true,
+                            pagos = 0
                         });
                 });
 

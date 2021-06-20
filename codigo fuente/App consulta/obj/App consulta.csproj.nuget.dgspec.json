@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/sebastian/Documents/GitHub/compensacion/codigo fuente/App consulta/App consulta.csproj": {}
+    "C:\\Users\\rinco\\github\\compensacion\\codigo fuente\\App consulta\\App consulta.csproj": {}
   },
   "projects": {
-    "/Users/sebastian/Documents/GitHub/compensacion/codigo fuente/App consulta/App consulta.csproj": {
+    "C:\\Users\\rinco\\github\\compensacion\\codigo fuente\\App consulta\\App consulta.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/sebastian/Documents/GitHub/compensacion/codigo fuente/App consulta/App consulta.csproj",
+        "projectUniqueName": "C:\\Users\\rinco\\github\\compensacion\\codigo fuente\\App consulta\\App consulta.csproj",
         "projectName": "App consulta",
-        "projectPath": "/Users/sebastian/Documents/GitHub/compensacion/codigo fuente/App consulta/App consulta.csproj",
-        "packagesPath": "/Users/sebastian/.nuget/packages/",
-        "outputPath": "/Users/sebastian/Documents/GitHub/compensacion/codigo fuente/App consulta/obj/",
+        "projectPath": "C:\\Users\\rinco\\github\\compensacion\\codigo fuente\\App consulta\\App consulta.csproj",
+        "packagesPath": "C:\\Users\\rinco\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rinco\\github\\compensacion\\codigo fuente\\App consulta\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/sebastian/.config/NuGet/NuGet.Config"
+          "C:\\Users\\rinco\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -91,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.203/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

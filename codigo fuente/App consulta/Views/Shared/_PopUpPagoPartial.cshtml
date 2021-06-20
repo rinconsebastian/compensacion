@@ -1,0 +1,105 @@
+﻿<div class="modal fade" id="modalPago" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Registrar nuevo Pago</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form asp-action="Pagar" asp-controller="Persona"  method="post" id="formpago">
+                    <div class=" row">
+                        <div class="col-md-4">
+                            <div class="row">
+                                <label for="staticcedula" class="col-sm-4 col-form-label">Cedula</label>
+                                <div class="col-sm-8">
+                                    <input type="int" readonly class="form-control-plaintext" id="staticcedula" name="staticcedula" value="@Model.Id">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-8">
+                            <div class="row">
+                                <label for="staticnombre" class="col-sm-3 col-form-label">Nombre</label>
+                                <div class="col-sm-9">
+                                    <input type="datetime" readonly class="form-control-plaintext" id="staticnombre" name="staticnombre"  value="@Model.Nombre">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="row">
+                                <label for="staticdate" class="col-sm-4 col-form-label">Fecha</label>
+                                <div class="col-sm-8">
+                                    <input type="datetime" readonly class="form-control-plaintext" id="staticdate"  name="staticdate"  value="@DateTime.Now.ToShortDateString()">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+                            <div class="row">
+                                <label for="staticnumero" class="col-sm-6 col-form-label">N. pago</label>
+                                <div class="col-sm-6">
+                                    <input type="number" readonly class="form-control-plaintext" id="staticnumero"  name="staticnumero" value="1">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="col-md-4">
+
+                            <div class="row">
+                                <label for="inputvalor" class="col-sm-6 col-form-label">Valor a pagar</label>
+                                <div class="col-sm-6">
+                                    <input type="text" readonly class="form-control-plaintext" id="inputvalor"   name="inputvalor" value="@Model.Actividad.Valor">
+                                    <input type="hidden" readonly class="form-control-plaintext" id="inputadjunto_upload_cedula"  name="inputadjunto_upload_cedula" >
+                                    <input type="hidden" readonly class="form-control-plaintext" id="inputadjunto_upload_comprobante"  name="inputadjunto_upload_comprobante" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+
+
+
+
+
+
+
+
+                </form>
+
+                <div class="row">
+                    <div class="col-sm-6">
+
+
+                        @await Html.PartialAsync("_UploadBox", new FormAdjuntoModel{ Id= Model.Id ,Ruta= "upload_cedula", Nombre="Cédula" })
+
+
+                    </div>
+
+                    <div class="col-sm-6">
+
+
+                        @await Html.PartialAsync("_UploadBox", new FormAdjuntoModel { Id = Model.Id, Ruta = "upload_comprobante", Nombre = "Comprobante de pago" })
+
+
+                    </div>
+
+                    
+
+                </div>
+
+               
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancela</button>
+                <button type="button" class="btn btn-primary btn-registrarPago">Registrar pago</button>
+            </div>
+        </div>
+    </div>
+</div>

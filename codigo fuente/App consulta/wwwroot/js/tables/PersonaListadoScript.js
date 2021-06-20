@@ -183,7 +183,7 @@ var funcLE = {
 
                         var idEnc = options.data.id;
                         var nombre = options.data.nombre;
-                        var contenido = '<a href="/Details/' + idEnc + '" title="Detalles encuestador ' + nombre + '" class="btn btn-listado btn-outline-info btn-xs ml-1" ><i class="fas fa-file-alt"></i></a>'
+                        var contenido = '<a href="/Persona/Detalles/' + idEnc + '" title="Detalles encuestador ' + nombre + '" class="btn btn-listado btn-outline-info btn-xs ml-1" ><i class="fas fa-file-alt"></i></a>'
                         
 
                         $("<div class='preventSelection'>")
